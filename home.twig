@@ -1,0 +1,50 @@
+
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bk-pt-home">
+
+<div class="nav">
+    <div class="nav-extended wrapper">
+        {{widget('extendednavigation', 'desktopnavigation', {})|raw}}
+    </div>
+    <div class="desktop-basket-container wrapper">
+        {{widget('ecombasket', 'desktopecombasket', {})|raw}}
+    </div>
+</div>
+
+<header class="bk-header">   
+    <div class="wrapper">
+        <div class="companyheader">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": ""})|raw}}
+</header>
+
+<div class="template-feature">
+    <div class="wrapper">
+         <div class="feature-img-widget">
+            {{widget('image', 'image', { 'src': asset('images/feature-img.jpg'), 'title': 'Lorem Ipsum Dolor Sit Amet Vivamus Nederles', 'description': 'Vivamus rhoncus ipsum tellus', 'alt': '', 'fileName': 'feature-img.jpg', 'fileSize': '58kb', 'imageSize': '960 x 640', 'imageWidth': '100%'})|raw}}
+        </div>
+    </div>
+</div>
+
+<div class="main wrapper clearfix">
+    <div class="tablet-basket-container">
+        {{widget('ecombasket', 'tabletecombasket', {})|raw}}
+    </div>
+    {{widget('ecomproductslist', 'ecomlisthome', {})|raw}}
+    {{zone('main')|raw}}
+</div>
+
+<footer class="bk-footer">
+    <div class="wrapper clearfix">
+        {{widget('content', 'footercolumn1content', {"content":"<p>Lorem Ipsum Dolor</p>"})|raw}}
+        {{widget('socialicons', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+    </div>
+</footer>
+
+</div>
+
+
+{% endblock %}
