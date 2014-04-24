@@ -26,13 +26,13 @@
          <div class="feature-img-widget">
             {{widget('image', 'image', { 'src': asset('images/feature-img.jpg'), 'title': 'Lorem Ipsum Dolor Sit Amet Vivamus Nederles', 'description': 'Vivamus rhoncus ipsum tellus', 'alt': '', 'fileName': 'feature-img.jpg', 'fileSize': '58kb', 'imageSize': '960 x 640', 'imageWidth': '100%'})|raw}}
         </div>
+        <div class="tablet-basket-container">
+            {{widget('ecombasket', 'tabletecombasket', {})|raw}}
+        </div>
     </div>
 </div>
 
 <div class="main wrapper clearfix">
-    <div class="tablet-basket-container">
-        {{widget('ecombasket', 'tabletecombasket', {})|raw}}
-    </div>
     {{widget('ecomproductslist', 'ecomlisthome', {})|raw}}
     {{zone('main')|raw}}
 </div>

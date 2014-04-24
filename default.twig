@@ -18,16 +18,14 @@
         <div class="companyheader">
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
             {{widget('companyname', 'companyname', {"business": ""})|raw}}
+        </div>
+        <div class="tablet-basket-container">
+            {{widget('ecombasket', 'tabletecombasket', {})|raw}}
+        </div>
+    </div>
 </header>
 
 <div class="main wrapper clearfix">
-    <div class="tablet-basket-container">
-        {{widget('ecombasket', 'tabletecombasket', {})|raw}}
-    </div>
-    {{widget('ecombasket', 'ecombasket', {})|raw}}
-    {{widget('ecomcheckout', 'ecomcheckout', {})|raw}}
-    {{widget('ecomproductslist', 'ecomproductslist', {})|raw}}
-    {{widget('ecomproduct', 'ecomproduct', {})|raw}}
     {{zone('main')|raw}}
 </div>
 
