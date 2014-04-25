@@ -84,17 +84,17 @@
         },
         "font4": {
             "font-family": "\"Merriweather\", Georgia, serif",
-            "font-size": "13px",
+            "font-size": "12px",
             "font-weight": "400",
-            "line-height": "25px",
+            "line-height": "26px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit"
         },
         "font5": {
             "font-family": "\"Merriweather\", Georgia, serif",
-            "font-size": "13px",
+            "font-size": "12px",
             "font-weight": "400",
-            "line-height": "25px",
+            "line-height": "26px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit"
         },
