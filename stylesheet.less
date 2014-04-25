@@ -1208,9 +1208,17 @@ body {
 }
 
 .blog-post-item {
-    margin: 1.5em 0;
-    padding-bottom: 1em;
+    margin: 3.5em 0;
+    padding-bottom: 3em;
+    @media @mobile {
+        margin: 2.5em 0;
+        padding-bottom: 2em;
+    }
     h2 {
+        padding: 1em 0;
+        @media @mobile {
+            padding: 1em 0 0;
+        }
         a {
             font-family: @font-swatch2-font-family;
             font-size: @font-swatch2-font-size;
