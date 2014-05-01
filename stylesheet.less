@@ -23,7 +23,6 @@ body {
     padding-bottom: 0;
     padding-left: 0;
     @media @tablet {
-        padding-top: 0;
         padding-right: 0;
         padding-bottom: 2em;
         padding-left: 0;
@@ -52,6 +51,10 @@ body {
 
 .nav {
     background-color: @color-swatch7;
+    min-height: 51px;
+    @media @tablet {
+        min-height: 40px;
+    }
 }
 
 .tabletmob-nav {
