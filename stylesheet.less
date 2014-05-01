@@ -1368,7 +1368,7 @@ hr {
         width: 66.5%;
         margin: 2% 0 2% 3%;
         display: inline-block;
-        @media @tablet {
+        @media only screen and (max-width: 830px) {
             width: 97%;
         }
         @media @mobile {
@@ -1401,13 +1401,16 @@ hr {
                 display: none;
             }
             select {
+                -moz-appearance: none;
+                text-indent: 0.01px;
+                text-overflow: '';
                 cursor: pointer;
                 -webkit-appearance: none;
                 -webkit-border-radius: 0;
                 position: relative;
                 background-image: image('/images/arrow-down.png');
                 background-repeat: no-repeat;
-                background-position: right 12px center;
+                background-position: right center;
                 margin-bottom: 12px;
                 padding: 8px 33px 8px 8px;
                 border: none;
@@ -1418,6 +1421,9 @@ hr {
                     border: none;
                     background-color: darken(@color-swatch1,12%);
                 }
+            }
+            select::-ms-expand {
+                display: none;
             }
             &:first-child select {
                 width: 73%;
@@ -1432,7 +1438,7 @@ hr {
         text-align: right;
         display: inline-block;
         margin-left: 0;
-        @media @tablet {
+        @media only screen and (max-width: 830px) {
             text-align: left;
             width: 100%;
             margin-left: 3%;
