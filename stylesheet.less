@@ -1099,6 +1099,9 @@ body {
         background-color: #ffffff;
         margin-right: 5px;
         margin-bottom: 5px;
+        @media @mobile {
+            width: 100%;
+        }
     }
     .signupform fieldset button, .widget.profile form button {
         padding: 9px 10px 10px;
@@ -1293,7 +1296,10 @@ width: 100%;
         }
         input {
             border: 1px solid darken(@color-swatch1,10%);
+            @media @mobile {
+                width: 100%;
             }
+        }
 
         button {
             padding: 6px 10px 8px;
