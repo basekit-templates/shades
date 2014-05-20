@@ -2,6 +2,7 @@
     "name":"Shades",
     "thumbnail":"shades.png",
     "screenshot":"shades.png",
+    "templateType":"ecommerce",
     "pageTypes": ["default", "home", "about", "contact", "gallery", "menu", "ecomcheckout"],
     "tags": {
     "en": ["clean", "menu", "ecommerce", "shop"],
