@@ -1375,7 +1375,7 @@ hr {
         margin: 2% 0 2% 3%;
         display: inline-block;
         @media only screen and (max-width: 830px) {
-            width: 97%;
+            width: 100%;
         }
         @media @mobile {
             background-color: darken(@color-swatch1,5%);
@@ -1385,19 +1385,15 @@ hr {
             width: 100%;
         }
         .form-group {
-            width: auto;
             margin-right: 1%;
             display: inline-block;
             @media @tablet {
-                width: 30%;
                 margin-right: 2.5%;
             }
             @media @mobile {
                 width: 100%;
             }
             label[for="productlist-sort"] {
-                display: block;
-                width: 25%;
                 display: inline-block;
                 @media @tablet {
                     width: 100%;
@@ -1411,7 +1407,7 @@ hr {
                 text-indent: 0.01px;
                 text-overflow: '';
                 background-position: right 12px center;
-                background-position-x: 93%;
+                background-position-x: 94%;
                 background-position-y: 55%;
                 cursor: pointer;
                 -webkit-appearance: none;
@@ -1424,17 +1420,17 @@ hr {
                 border: none;
                 background-color: @color-swatch2;
                 color: @color-swatch5;
-                width: 100%;
                 @media @mobile {
                     border: none;
                     background-color: darken(@color-swatch1,12%);
+                    background-position-x: 96%;
+                    width: 100%;
                 }
             }
             select::-ms-expand {
                 display: none;
             }
             &:first-child select {
-                width: 73%;
                 @media @tablet {
                     width: 100%;
                 }
