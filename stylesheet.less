@@ -77,14 +77,10 @@ body {
 
 .widget {
     &.extendednavigation {
-        float: none;
         position: relative;
         min-height: 40px;
         width: 70%;
         margin: 0;
-        @media only screen and (min-width: 1140px) {
-            margin: 0 auto;
-        }
         @media @tablet {
             position: relative;
             width: 100%;
@@ -103,7 +99,6 @@ body {
         }
         ul {
             max-width: 80%;
-            text-align: center;
             padding: 0;
             @media @tablet {
                 /* Hidden until nav icon is clicked */
@@ -115,8 +110,7 @@ body {
                 padding: 40px 0 0;
             }
             li {
-                float: left;
-                display: block;
+                display: inline-block;
                 padding: 13px 0;
                 @media @tablet {
                     width: 100%;
@@ -125,15 +119,15 @@ body {
                     border-bottom: 1px dotted darken(@color-swatch7,10%);
                     background-color: lighten(@color-swatch7,10%);
                 }
+                a {
+                    padding: 0 30px 0 0 !important;
+                    @media @tablet {
+                        padding: 0 5% !important;
+                    }
+                }
                 &:first-child {
                     @media @tablet {
                         border-top: 1px dotted darken(@color-swatch7,10%);
-                    }
-                    a {
-                        padding-left: 0;
-                        @media @tablet {
-                            padding-left: 5%;
-                        }
                     }
                 }
                 &:last-child {
@@ -211,7 +205,7 @@ body {
                     }
                     .text {
                         display: block;
-                        padding: 0 15px;
+                        padding: 0 30px 0 0;
                         font-family: @font-swatch6-font-family;
                         font-size: @font-swatch6-font-size;
                         font-weight: @font-swatch6-font-weight;
@@ -256,6 +250,10 @@ body {
                                 }
                             }
                             a {
+                                padding: 0 15px !important;
+                                @media @tablet {
+                                    padding: 0 5% !important;
+                                }
                                 .text {
                                     padding: 0;
                                     &:after {
