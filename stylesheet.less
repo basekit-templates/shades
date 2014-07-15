@@ -1419,9 +1419,6 @@ hr {
                     width: 100%;
                 }
             }
-            label {
-                display: none;
-            }
             select {
                     text-indent: 0.01px;
                     text-overflow: '';
@@ -1432,13 +1429,14 @@ hr {
                     position: relative;
                     margin-bottom: 12px;
                     padding: 8px 33px 8px 8px;
-                    border: 1px solid darken(@color-swatch1,12%);
+                    border: 1px solid darken(@color-swatch1,10%);
+                    background-color: lighten(@color-swatch1,5%);
                     color: @color-swatch5;
                     height: 35px;
                     @media @mobile {
                         width: 100%;
                         height: 45px;
-                        border: 1px solid darken(@color-swatch2,8%);
+                        border: 1px solid darken(@color-swatch2,10%);
                     }
                 }
                 select::-ms-expand {
@@ -1454,8 +1452,8 @@ hr {
             }
             &.productlist-search {
                 input {
-                    background-color: @color-swatch2;
-                    border: 1px solid darken(@color-swatch1,5%);
+                    background-color: lighten(@color-swatch1,5%);
+                    border: 1px solid darken(@color-swatch1,10%);
                     height: 40px;
                     @media @mobile {
                         background-color: @color-swatch1;
