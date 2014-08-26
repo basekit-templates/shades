@@ -3,7 +3,7 @@
     "thumbnail":"shades.png",
     "screenshot":"shades.png",
     "templateType":"ecommerce",
-    
+    "pageTypes": ["home"],
     "tags": {
     "en": ["clean", "menu", "ecommerce", "shop"],
     "es": ["limpio", "menú", "ecommerce", "tienda"],
