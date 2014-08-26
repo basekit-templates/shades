@@ -96,12 +96,9 @@ body {
             width: 100%;
             margin: 0 auto;
             background-color: lighten(@color-swatch7,10%);
+            min-height: 30px;
         }
-        &:hover {
-            @media @tablet {
-                background-color: @color-swatch7;
-            }
-        }
+        
 
         .extendednavigation ul.align-right {
             .folder > .text:after {
@@ -293,12 +290,17 @@ body {
                        width: 20px;
                        height: 3px;
                        background: @color-swatch6;
-                       top: 17px;
+                       top: 13px;
                        left: 50%;
                        margin-left: -10px;
                        box-shadow: 0 6px 0 @color-swatch6, 0 12px 0 @color-swatch6;
                    }
-               }
+                }
+                &:hover {
+                    @media @tablet {
+                        background-color: @color-swatch7;
+                    }
+                }
             }
         }
     }
@@ -622,6 +624,7 @@ body {
         border-bottom: none;
     }
     .companyheader {
+        .clearfix;
         padding: 3.5em 0 2.5em;
         float: none;
         @media @tablet {
