@@ -1,5 +1,13 @@
 @import "@{templateCommon}/basekit-bootstrap.less";
 
+@import "@{templateLocal}/css/common-forms.less";
+
+
+// Larget than tablet
+@desktop: ~"only screen and (min-width : 769px)";
+// Larger than mobile
+@mobile-up: ~"only screen and (min-width : 480px)";
+
 body {
   background-color: @color-swatch1;
 }
@@ -1099,26 +1107,8 @@ body {
     padding: 0;
 }
 
-.widget.contactform fieldset input, .widget.contactform fieldset textarea {
-    border: 1px solid darken(@color-swatch1,10%);
-}
 
-/* ===============================
-  SIGN UP FORM & PROFILE FORM
-   =============================== */
 
-   .widget.signupform fieldset input, .widget.profile form fieldset input {
-        border: 1px solid darken(@color-swatch1,10%);
-        background-color: #ffffff;
-        margin-right: 5px;
-        margin-bottom: 5px;
-        @media @tablet {
-            width: 100%;
-        }
-    }
-    .signupform fieldset button, .widget.profile form button {
-        padding: 9px 10px 10px;
-    }
 
 /* ===============================
    TWITTER WIDGET
@@ -1309,6 +1299,105 @@ body {
   BLOG
    =============================== */
 
+// ======= Widget: BlogSearch
+.widget.blogsearch {
+    form {
+        .form-group {
+            // Flex
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-direction: normal;
+            -moz-box-direction: normal;
+            -webkit-box-orient: horizontal;
+            -moz-box-orient: horizontal;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-pack: justify;
+            -moz-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-align-content: flex-start;
+            -ms-flex-line-pack: start;
+            align-content: flex-start;
+            -webkit-box-align: center;
+            -moz-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+    
+
+        label {
+            // Flex
+            -webkit-box-ordinal-group: 1;
+            -moz-box-ordinal-group: 1;
+            -webkit-order: 0;
+            -ms-flex-order: 0;
+            order: 0;
+            -webkit-box-flex: 0;
+            -moz-box-flex: 0;
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            -webkit-align-self: auto;
+            -ms-flex-item-align: auto;
+            align-self: auto;
+            // Appearance
+            margin-right: 1em;
+            margin-bottom: 0;
+            @media @mobile {
+                width: 100%;
+                display: block;
+            }
+        }
+        input {  
+            // Flex
+            -webkit-box-ordinal-group: 1;
+            -moz-box-ordinal-group: 1;
+            -webkit-order: 0;
+            -ms-flex-order: 0;
+            order: 0;
+            -webkit-box-flex: 1;
+            -moz-box-flex: 1;
+            -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            -webkit-align-self: auto;
+            -ms-flex-item-align: auto;
+            align-self: auto;
+        }
+
+        button {
+            // Flex
+            -webkit-box-ordinal-group: 1;
+            -moz-box-ordinal-group: 1;
+            -webkit-order: 0;
+            -ms-flex-order: 0;
+            order: 0;
+            -webkit-box-flex: 0;
+            -moz-box-flex: 0;
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            -webkit-align-self: auto;
+            -ms-flex-item-align: auto;
+            align-self: auto;
+
+            position: relative;
+            top: 0px;
+        }
+    }
+}
+
+
 .widget {
     &.blogpostlist {
         .blog-post-item {
@@ -1382,31 +1471,7 @@ float: left;
 width: 100%;
 }
 
-/* BLOG SEARCH */
-.blogsearch {
-    form {
-        label {
-            display: block;
-        }
-        input {
-            border: 1px solid darken(@color-swatch1,10%);
-            @media @mobile {
-                width: 100%;
-            }
-        }
 
-        button {
-            padding: 6px 10px 8px;
-            font-family: @font-swatch7-font-family;
-            color: @font-swatch7-color;
-            font-size: @font-swatch7-font-size;
-            font-weight: @font-swatch7-font-weight;
-            line-height: @font-swatch7-line-height;
-            background-color: @font-swatch7-background-color;
-            border: none;
-        }
-    }
-}
 
 
 /* ===============================
@@ -1526,23 +1591,14 @@ hr {
             }
             &.productlist-search {
                 input {
-                    background-color: lighten(@color-swatch1,5%);
-                    border: 1px solid darken(@color-swatch1,10%);
-                    height: 40px;
                     @media @mobile {
-                        background-color: @color-swatch1;
                         width: 100%;
                         margin-bottom: 20px;
                     }
                 }
                 button.btn {
-                    height: 40px;
-                    padding: 5px 14px 8px;
                     @media @mobile {
                         width: 100%;
-                    }
-                    &:hover {
-                        background-color: @font-swatch7-background-color-hover;
                     }
                 }
             }
@@ -1770,7 +1826,6 @@ hr {
                 }               
             }
             .btn.ecom-product-go-to-checkout-btn {
-                padding: 10px 20px;
                 &:after {
                     content: "\003E";
                     color: white;
@@ -2056,3 +2111,113 @@ hr {
         }
 
 }
+
+
+
+
+// ======= Widget: Sign up form
+.widget.signupform {
+
+
+  
+  .widget.signupform fieldset {
+    padding: 0;
+    border: 0;
+    margin: 0;
+  }
+
+
+  .form-group {
+    // Flex
+    display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-direction: normal;
+      -moz-box-direction: normal;
+      -webkit-box-orient: horizontal;
+      -moz-box-orient: horizontal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      -moz-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-align-content: stretch;
+      -ms-flex-line-pack: stretch;
+      align-content: stretch;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+
+     
+
+      label {
+        // Flex
+      -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        -webkit-box-flex: 0;
+        -moz-box-flex: 0;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+
+      // Layout
+        float: none;
+        width: auto;
+        margin: 0 1em 0 0;
+
+        @media @mobile {
+          display: block;
+          width: 100%;
+        }
+    }
+
+    input.email {
+       -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+    }
+    button {
+       -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        -webkit-box-flex: 0;
+        -moz-box-flex: 0;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+        top: 0;
+    }
+  }
+}
+
